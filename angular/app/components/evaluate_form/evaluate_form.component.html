@@ -1,0 +1,31 @@
+<form ng-submit="vm.submit()" ng-init="vm.getquestion()">
+<div flex layout='row' class="evaluate">
+	<div flex="30">
+		&nbsp;
+	</div>
+	<div flex="40" layout="column">
+		<div flex>
+			<h1>{{vm.title}}</h1>
+		</div>
+		<div flex class="contents">
+			{{vm.contents}}			
+		</div>
+		<div flex layout="row">
+			<div flex="10" style="margin-top: 10px;">Bad</div>
+			<div flex="80">
+				<md-slider md-discrete ng-model="vm.myValue" flex step="1" min="1" max="100" aria-label="Bad" id="value-slider">
+				</md-slider>	
+			</div>
+			<div flexf="10" style="margin-top: 10px;">Good</div>		
+		</div>
+		<div flex style="text-align: center;">
+			<md-button class="md-raised" type="submit" aria-label="save" md-no-ink="true|false" md-ripple-size="auto">
+				Save
+			</md-button>			
+		</div>			
+	</div>
+	<div flex="30">
+		&nbsp;
+	</div>
+</div>
+</form>

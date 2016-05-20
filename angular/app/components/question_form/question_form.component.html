@@ -1,0 +1,34 @@
+<form>
+	<div layout="row" class="question-form-component-container">
+		<div flex="50" layout="column">
+			<div flex="10" style="text-align: center;">
+				<md-select ng-model="vm.activity" placeholder="Select a Activity" class="QuestionForm-Activity">
+			    	<md-option ng-value="user" ng-repeat="option in vm.activities">{{ option.name }}</md-option>
+			  	</md-select>			  	
+			</div>
+			<div flex="10">				
+				<md-input-container class="LoginForm-inputContainer">
+					<label>Title</label>
+					<input type="text" ng-model="vm.question_title">
+				</md-input-container>				
+			</div>
+			<div flex="60">				
+				<textarea ng-model="vm.question" cols="40" rows="25" placeholder="Contents"></textarea>	
+			</div>
+			<div flex="20" layout="row" class="QuestionForm-Activity ">
+				<md-button class="md-raised" type="submit" aria-label="add" md-no-ink="true|false" md-ripple-size="auto">
+					Add
+				</md-button>
+				<md-button class="md-raised" type="button" aria-label="update" md-no-ink="true|false" md-ripple-size="auto" ng-click="vm.update()">
+					Update
+				</md-button>
+				<md-button class="md-raised" type="button" aria-label="delete" md-no-ink="true|false" md-ripple-size="auto" ng-click="vm.delete()">
+					Delete
+				</md-button>
+			</div>
+		</div>
+		<div flex="50" layout="column">
+
+		</div>
+	</div>
+</form>

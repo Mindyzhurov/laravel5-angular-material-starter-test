@@ -1,0 +1,38 @@
+<form ng-submit="vm.submit()" ng-init="vm.initActivity()">
+	<div flex>
+		<h1>Create Activities</h1>
+	</div>
+	<div flex layout="column" class="contents">
+		<div flex="20" layout="row">
+			<div flex="80">
+				<md-input-container class="LoginForm-inputContainer">
+					<label>Name</label>
+					<input type="text" ng-model="vm.activity_name">
+				</md-input-container>	
+			</div>
+			<md-button class="md-raised" type="submit" aria-label="add" md-no-ink="true|false" md-ripple-size="auto">
+				Add
+			</md-button>
+			<md-button class="md-raised" type="button" aria-label="update" md-no-ink="true|false" md-ripple-size="auto" ng-click="vm.update()">
+				Update
+			</md-button>
+			<md-button class="md-raised" type="button" aria-label="delete" md-no-ink="true|false" md-ripple-size="auto" ng-click="vm.delete()">
+				Delete
+			</md-button>			
+		</div>
+		<div flex="30" layout="column" class="">
+			<label>Description</label>
+			<textarea ng-model="vm.description" cols="30" rows="5"></textarea>			
+		</div>
+		<div flex="50" style="text-align: center;">
+			<md-list>			
+			  <md-list-item class="md-2-line" ng-repeat="item in vm.activities" ng-click="vm.setVal(item)">
+			    <md-checkbox ng-model="item.done" aria-label='check'></md-checkbox>
+			    <div class="md-list-item-text">
+			      <h3>{{item.name}}</h3>			      
+			    </div>
+			  </md-list-item>
+			</md-list>
+		</div>	
+	</div>	
+</form>

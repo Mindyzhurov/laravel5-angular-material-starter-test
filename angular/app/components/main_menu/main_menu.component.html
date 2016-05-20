@@ -1,0 +1,15 @@
+
+<md-menu-bar class="mymainmenu" ng-init="vm.menuInit()">
+	<md-menu>
+		<button ng-click="$mdOpenMenu()" style="color: black;">
+			{{vm.loggedUser}}
+		</button>
+		<md-menu-content class="listmenu">
+			<md-list>
+			  <md-list-item class="md-2-line" ng-repeat="menu in vm.menus" ng-click="vm.goPage(menu.url)">
+			  	{{menu.name}}
+			  </md-list-item>
+			</md-list>
+		</md-menu-content>
+	</md-menu>
+</md-menu-bar>

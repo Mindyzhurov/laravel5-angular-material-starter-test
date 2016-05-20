@@ -1,0 +1,26 @@
+<md-menu-bar class="mymenubar">
+	<md-menu>
+		<button ng-click="$mdOpenMenu()" style="color: black;">
+			<md-icon md-svg-src="/img/icons/ic_reorder_black_24px.svg" style="font-color:black;"></md-icon>	
+		</button>
+		<md-menu-content>
+			<div flex layout="column">
+				<div flex="30" layout="row" class="menu-row">
+					<div flex="30" class="menu-col" ng-click="vm.goPage('share');">Share</div>
+					<div flex="30" class="menu-col" ng-click="vm.goPage('learn');">Learn</div>
+					<div flex="30" class="menu-col" ng-click="vm.goPage('analyze');">Analyze</div>
+				</div>
+				<div flex="30" layout="row" class="menu-row">
+					<div flex="30" class="menu-col" ng-click="vm.goPage('');"></div>
+					<div flex="30" class="menu-col" ng-click="vm.goPage('');"></div>
+					<div flex="30" class="menu-col" ng-click="vm.goPage('');"></div>
+				</div>
+				<div flex="30" layout="row" class="menu-row">
+					<div flex="30" class="menu-col" ng-click="vm.goPage('plan');">Plan</div>
+					<div flex="30" class="menu-col" ng-click="vm.goPage('perform');">Perform</div>
+					<div flex="30" class="menu-col" ng-click="vm.goPage('evaluate');">Evaluate</div>
+				</div>
+			</div>
+		</md-menu-content>
+	</md-menu>
+</md-menu-bar>
